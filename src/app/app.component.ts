@@ -18,7 +18,7 @@ export class AppComponent {
   messageList: any[] = [];
   check = true;
   goldHoles = Array(18);
-  socketStatus = '';
+  socketStatus = 'Disconnect';
   slideChangeNumber = 0;
   ngOnInit() {
     // socket io setting

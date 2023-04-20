@@ -36,52 +36,56 @@
             </div>
           </div>
           <div class="totel-score-banner">
-            <table
-              [class.animate__bounceIn]="slideChangeNumber === i"
-              class="table table-striped table-hover text-center animate__animated animate__delay-3s"
-            >
-              <thead class="text-center">
-                <tr [class.active]="check">
-                  <th scope="col">Handicap</th>
-                  <th scope="col">In STP</th>
-                  <th scope="col">In Strokes</th>
-                  <th scope="col">Total STP</th>
-                  <th scope="col">Total Strokes</th>
-                  <th scope="col">Rank Integer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{{ player.Handicap }}</td>
-                  <td>{{ player.InSTP }}</td>
-                  <td>{{ player.InStrokes }}</td>
-                  <td>{{ player.TotalSTP }}</td>
-                  <td>{{ player.TotalStrokes }}</td>
-                  <td>{{ player.CalculatedRankInteger }}</td>
-                </tr>
-              </tbody>
-            </table>
-            <table
-              [class.animate__bounceIn]="slideChangeNumber === i"
-              class="table table-striped table-hover text-center animate__animated animate__delay-4s"
-            >
-              <thead class="text-center">
-                <tr [class.active]="check">
-                  <th scope="col">Today</th>
-                  <th scope="col">Unique Position</th>
-                  <th scope="col">last Updated</th>
-                  <th scope="col">Time</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{{ player.Today }}</td>
-                  <td>{{ player.UniquePosition }}</td>
-                  <td>{{ player.lastUpdated }}</td>
-                  <td>{{ player.teeTime }}</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive-sm">
+              <table
+                [class.animate__bounceIn]="slideChangeNumber === i"
+                class="table table-striped table-hover text-center animate__animated animate__delay-3s"
+              >
+                <thead class="text-center">
+                  <tr [class.active]="check">
+                    <th scope="col">Handicap</th>
+                    <th scope="col">In STP</th>
+                    <th scope="col">In Strokes</th>
+                    <th scope="col">Total STP</th>
+                    <th scope="col">Total Strokes</th>
+                    <th scope="col">Rank Integer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ player.Handicap }}</td>
+                    <td>{{ player.InSTP }}</td>
+                    <td>{{ player.InStrokes }}</td>
+                    <td>{{ player.TotalSTP }}</td>
+                    <td>{{ player.TotalStrokes }}</td>
+                    <td>{{ player.CalculatedRankInteger }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-responsive-sm">
+              <table
+                [class.animate__bounceIn]="slideChangeNumber === i"
+                class="table table-striped table-hover text-center animate__animated animate__delay-4s"
+              >
+                <thead class="text-center">
+                  <tr [class.active]="check">
+                    <th scope="col">Today</th>
+                    <th scope="col">Unique Position</th>
+                    <th scope="col">last Updated</th>
+                    <th scope="col">Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ player.Today }}</td>
+                    <td>{{ player.UniquePosition }}</td>
+                    <td>{{ player.lastUpdated }}</td>
+                    <td>{{ player.teeTime }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div
             class="role-charctor-banner d-flex justify-content-center align-center"
