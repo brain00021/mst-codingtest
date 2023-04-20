@@ -44,7 +44,7 @@ export class AppComponent {
   }
   getIcon(sex: string, number: number) {
     return `
-    <img src="/assets/golf${(number % 4) + 1}.png" alt="image"/>`;
+    <img src="./assets/golf${(number % 4) + 1}.png" alt="image"/>`;
   }
   getGolfHoleStpNumber(player: any, number: number) {
     return player[`Hole${number}STP`] || 0;
