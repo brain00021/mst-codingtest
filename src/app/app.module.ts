@@ -7,14 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 // put yourself components.
-import { TodoListModule } from './todo-list/todo-list.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoListModule,
     NgbModule,
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
