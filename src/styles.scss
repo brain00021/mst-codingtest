@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@import "animate.css";
+:root {
+  --animate-delay: 0.5s;
+}
+
+@for $i from 1 through 18 {
+  .animate__delay-#{$i}s {
+    // animation-delay: #{$i * 0.5}s;
+    animation-delay: calc(var(--animate-delay) * $i);
+  }
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #333;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  border-radius: 50%;
+  @media screen and (max-width: 640px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+.carousel-control-prev {
+  left: -50px;
+  @media screen and (max-width: 640px) {
+    left: -30px;
+  }
+}
+.carousel-control-next {
+  right: -50px;
+  @media screen and (max-width: 640px) {
+    right: -30px;
+  }
+}
+body {
+  background: #a8ff78; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to bottom,
+  //   #78ffd6,
+  //   #a8ff78
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(#78ffd6, 0.5), #a8ff78),
+    url(assets/bg.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.empty-flag {
+  min-height: 130px;
+  width: 200px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    min-height: 0;
+    width: 160px;
+  }
+}
+.carousel-indicators {
+  bottom: -30px;
+  button {
+    background-color: #00cbe0 !important;
+  }
+}
+.banner-loading {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(#fff, 0.5);
+  z-index: 100;
+  flex-direction: column;
+  .logo {
+    width: 250px;
+    height: 250px;
+    background: url(assets/golf-logo.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+}

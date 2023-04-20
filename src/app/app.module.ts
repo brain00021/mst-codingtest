@@ -1,18 +1,31 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Directive } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CarouselModule, CarouselConfig } from 'ngx-bootstrap/carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+// put yourself components.
+import { TodoListModule } from './todo-list/todo-list.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TodoListModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    CarouselModule.forRoot(),
+    TooltipModule.forRoot(),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: CarouselConfig,
+      useValue: { interval: 12000, noPause: true, showIndicators: true },
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
